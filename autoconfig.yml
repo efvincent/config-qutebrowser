@@ -23,12 +23,15 @@ settings:
   colors.webpage.darkmode.enabled:
     global: false
   content.geolocation:
+    https://www.apple.com: false
     https://www.uhaul.com: false
   content.notifications.enabled:
     https://calendar.google.com: false
+    https://www.newsmax.com: false
     https://www.reddit.com: false
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: false
+    https://mail.google.com?extsrc=mailto&url=%25s: false
   qt.process_model:
     global: process-per-site
   session.lazy_restore:
@@ -48,12 +51,12 @@ settings:
   tabs.position:
     global: left
   tabs.show:
-    global: always
+    global: never
   tabs.show_switching_delay:
     global: 2000
   tabs.width:
-    global: 25%
+    global: 18%
   url.default_page:
     global: https://startpage.com
   window.transparent:
-    global: true
+    global: false

@@ -776,7 +776,7 @@ c.changelog_after_upgrade = 'minor'
 ##   - no-3rdparty: Accept cookies from the same origin only. This is known to break some sites, such as GMail.
 ##   - no-unknown-3rdparty: Accept cookies from the same origin only, unless a cookie is already set for the domain. On QtWebEngine, this is the same as no-3rdparty.
 ##   - never: Don't accept cookies at all.
-# c.content.cookies.accept = 'all'
+c.content.cookies.accept = 'no-unknown-3rdparty'
 
 ## Store cookies.
 ## Type: Bool
@@ -797,7 +797,7 @@ c.changelog_after_upgrade = 'minor'
 
 ## Try to pre-fetch DNS entries to speed up browsing.
 ## Type: Bool
-# c.content.dns_prefetch = True
+c.content.dns_prefetch = True
 
 ## Expand each subframe to its contents. This will flatten all the frames
 ## to become one scrollable page.
@@ -820,7 +820,7 @@ c.changelog_after_upgrade = 'minor'
 ##   - true
 ##   - false
 ##   - ask
-# c.content.geolocation = 'ask'
+c.content.geolocation = False
 
 ## Value to send in the `Accept-Language` header. Note that the value
 ## read from JavaScript is always the global value.
@@ -835,7 +835,7 @@ c.changelog_after_upgrade = 'minor'
 ## qutebrowser asks websites to not track your identity. If set to null,
 ## the DNT header is not sent at all.
 ## Type: Bool
-# c.content.headers.do_not_track = True
+c.content.headers.do_not_track = True
 
 ## When to send the Referer header. The Referer header tells websites
 ## from which website you were coming from when visiting them. No restart
@@ -845,7 +845,7 @@ c.changelog_after_upgrade = 'minor'
 ##   - always: Always send the Referer.
 ##   - never: Never send the Referer. This is not recommended, as some sites may break.
 ##   - same-domain: Only send the Referer for the same domain. This will still protect your privacy, but shouldn't break any sites. With QtWebEngine, the referer will still be sent for other domains, but with stripped path information.
-# c.content.headers.referer = 'same-domain'
+c.content.headers.referer = 'same-domain'
 
 ## User agent to send.  The following placeholders are defined:  *
 ## `{os_info}`: Something like "X11; Linux x86_64". * `{webkit_version}`:
@@ -879,15 +879,15 @@ c.changelog_after_upgrade = 'minor'
 ## QtWebEngine, writing the clipboard as response to a user interaction
 ## is always allowed.
 ## Type: Bool
-# c.content.javascript.can_access_clipboard = False
+c.content.javascript.can_access_clipboard = False
 
 ## Allow JavaScript to close tabs.
 ## Type: Bool
-# c.content.javascript.can_close_tabs = False
+c.content.javascript.can_close_tabs = False
 
 ## Allow JavaScript to open new tabs without user interaction.
 ## Type: Bool
-# c.content.javascript.can_open_tabs_automatically = False
+c.content.javascript.can_open_tabs_automatically = False
 
 ## Enable JavaScript.
 ## Type: Bool
@@ -905,7 +905,7 @@ c.changelog_after_upgrade = 'minor'
 ## Use the standard JavaScript modal dialog for `alert()` and
 ## `confirm()`.
 ## Type: Bool
-# c.content.javascript.modal_dialog = False
+c.content.javascript.modal_dialog = False
 
 ## Show javascript prompts.
 ## Type: Bool
@@ -1163,7 +1163,7 @@ c.changelog_after_upgrade = 'minor'
 ## Duration (in milliseconds) to wait before removing finished downloads.
 ## If set to -1, downloads are never removed.
 ## Type: Int
-# c.downloads.remove_finished = -1
+c.downloads.remove_finished = 60 * 1000 * 5  # 5 minutes
 
 ## Editor (and arguments) to use for the `edit-*` commands. The following
 ## placeholders are defined:  * `{file}`: Filename of the file to be
@@ -1460,7 +1460,7 @@ c.input.insert_mode.auto_load = True
 
 ## Enable back and forward buttons on the mouse.
 ## Type: Bool
-# c.input.mouse.back_forward_buttons = True
+c.input.mouse.back_forward_buttons = False
 
 ## Enable Opera-like mouse rocker gestures. This disables the context
 ## menu.
@@ -2052,7 +2052,7 @@ c.keyhint.delay = 200
 
 ## Default zoom level.
 ## Type: Perc
-c.zoom.default = '125%'
+c.zoom.default = '100%'
 
 ## Available zoom levels.
 ## Type: List of Perc
