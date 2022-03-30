@@ -27,8 +27,11 @@ settings:
     https://www.uhaul.com: false
   content.notifications.enabled:
     https://calendar.google.com: false
+    https://game24.pro: false
     https://www.newsmax.com: false
     https://www.reddit.com: false
+    https://www.sportskeeda.com: false
+    https://www.youtube.com: false
   content.register_protocol_handler:
     https://calendar.google.com?cid=%25s: false
     https://mail.google.com?extsrc=mailto&url=%25s: false
@@ -49,9 +52,9 @@ settings:
       right: 0
       top: 5
   tabs.position:
-    global: left
+    global: right
   tabs.show:
-    global: never
+    global: always
   tabs.show_switching_delay:
     global: 2000
   tabs.width:
